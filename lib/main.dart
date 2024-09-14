@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutterdemo/util/Global.dart';
 import 'package:flutterdemo/util/env_config.dart' as configs;
 import 'package:flutterdemo/util/global_configs.dart';
+import 'package:get/get.dart';
 import 'MyApp.dart';
 
 void main() {
@@ -137,5 +138,15 @@ test2() async{
   }catch(e){
     print(e);
   }
+
+  // 获取当前的Locale
+  // Locale myLocale = Localizations.localeOf(context);
+
+
+  var locale = const Locale('en', 'US');
+  var locale2 = const Locale('zh', 'CN');
+  await Get.updateLocale(locale);
+
+
 }
 

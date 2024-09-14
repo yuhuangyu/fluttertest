@@ -27,9 +27,12 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           translations: Messages(),
           theme: ThemeData(
-            brightness: Brightness.light,
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
+            // brightness: Brightness.light,
+            // splashColor: Colors.transparent,
+            // highlightColor: Colors.transparent,
+
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true,
           ),
           // home: const MyHomePage(title: 'Flutter Demo Home Page'),
           // home: const MyHomePage(),
@@ -43,12 +46,22 @@ class MyApp extends StatelessWidget {
             // FormBuilderLocalizations.delegate,
             RefreshLocalizations.delegate
           ],
+          //默认指定的语言
           locale: const Locale('zh', 'CN'),
+          // 备用语言
           fallbackLocale: const Locale('en', 'US'),
+          // locale: Get.deviceLocale,//跟随系统设置语言 持久化以后这里改一下
           supportedLocales: const [
             Locale('en', 'US'), // 美国英语
             Locale('zh', 'CN'), // 中文简体
           ],
+          // locale: LanguageUtils.getLocale(),
+          // fallbackLocale: const Locale("zh", "CN"),
+          localeResolutionCallback: (deviceLocale, supportedLocales) {
+            print('当前语言：${deviceLocale.toString()}');
+            return;
+          },
+          // supportedLocales: AppLocalizations.supportedLocales,
         );
       },
     );

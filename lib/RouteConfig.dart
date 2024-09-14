@@ -4,6 +4,7 @@ import 'package:flutterdemo/page/category/category_logic.dart';
 import 'package:flutterdemo/page/home/home_logic.dart';
 import 'package:flutterdemo/page/main/MyHomePage.dart';
 import 'package:flutterdemo/page/mine/mine_logic.dart';
+import 'package:flutterdemo/page/mymain/MyMainPage.dart';
 import 'package:flutterdemo/second/view.dart';
 import 'package:flutterdemo/third/view.dart';
 import 'package:flutterdemo/vebview/webview_page.dart';
@@ -14,6 +15,7 @@ class RouteConfig {
   static const String second = "/second";
   static const String third = "/third";
   static const String webview = "/webview";
+  static const String mymainpagepage = "/MyMainpagePage";
 
   static final List<GetPage> getPages = [
     GetPage(
@@ -38,6 +40,12 @@ class RouteConfig {
     GetPage(
       name: webview,
       page: () => const WebViewPage(),
+      transition: Transition.rightToLeft
+    ),
+    GetPage(
+        name: mymainpagepage,
+        page: () => const MyMainpagePage(),
+        transition: Transition.rightToLeft
     ),
   ];
 }

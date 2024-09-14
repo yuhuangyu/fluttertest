@@ -56,7 +56,12 @@ class Messages extends Translations {
           'detail': '详情',
           'recommend': '推荐',
           'homeSearchTip': '跑步鞋',
-          'loginHelp': '帮助'
+          'loginHelp': '帮助',
+          'home_reply': '问题反馈',
+          'test': '测试',
+          'home_dynamic': '动态',
+          'home_trend': '趋势',
+          'home_my': '我的',
         },
         'en_US': {
           'appName': 'Mall',
@@ -111,7 +116,12 @@ class Messages extends Translations {
           'detail': 'detail',
           'recommend': 'recommend',
           'homeSearchTip': 'running shoes',
-          'loginHelp': 'help'
+          'loginHelp': 'help',
+          'home_reply': '问题反馈',
+          'test': 'test',
+          'home_dynamic': 'Dynamic',
+          'home_trend': 'Trend',
+          'home_my': 'My',
         }
       };
 }

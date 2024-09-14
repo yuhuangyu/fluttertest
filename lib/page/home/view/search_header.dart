@@ -1,5 +1,8 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutterdemo/MyApp.dart';
+import 'package:flutterdemo/RouteConfig.dart';
 import 'package:flutterdemo/common/image/asset_image.dart';
 import 'package:flutterdemo/common/style/common_style.dart';
 import 'package:flutterdemo/common/view/persistentHeader/sliver_header_builder.dart';
@@ -21,10 +24,14 @@ Widget searchHeader(BuildContext context, RxDouble pageScrollY) {
           fit: StackFit.expand,
           children: <Widget>[
             Positioned(
-              top: 0,
-              left: 16,
-              child: assetImage(Assets.imagesIcPet, 36, 36),
-            ),
+                top: 0,
+                left: 16,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.toNamed(RouteConfig.mymainpagepage);
+                  },
+                  child: assetImage(Assets.imagesIcPet, 36, 36),
+                )),
             Positioned(
               top: 5,
               right: 18,
